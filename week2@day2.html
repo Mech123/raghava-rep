@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 10)   throw "is too high";
+    if(x < 5)  throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("demo").value = "";
+  }
+}
+</script>
+<button onclick="document.getElementById('d').innerHTML=Date()">The time is?</button>
+
+<p id="d"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="s"></p>
+
+<script>
+function myFunction() {
+  var num = 22; 
+  var greeting;
+  if (num > 10 && num<100) {
+    greeting = "num is between in 10 and 100";
+  } else {
+    greeting = "num not in 10 and 100";
+  }
+  document.getElementById("s").innerHTML = greeting;
+}
+</script>
+<p id="w"></p>
+
+<script>
+var text = "";
+var i = 0;
+var b=1
+while (i < 10) {
+	var v =b+i;
+    var b=v;
+    var i=b;
+    
+  text += "<br>The number is " + v;
+  
+}
+document.getElementById("w").innerHTML = text;
+</script>
+<p id="e"></p>
+
+<script>
+try {
+  adddlert("Welcome guest!");
+}
+catch(err) {
+  document.getElementById("e").innerHTML = err.message;
+}
+</script>
+<p id="n"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7,14,);
+document.getElementById("n").innerHTML = res;
+</script>
+
+
+
+</body>
+</html>
