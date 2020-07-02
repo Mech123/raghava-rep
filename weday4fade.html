@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+</script>
+<script> 
+		$(document).ready(function() { 
+			$("button").click(function() { 
+				$("#gfg").toggle(); 
+			}); 
+		}); 
+	</script> 
+	<style> 
+		#gfg { 
+			color: green; 
+			border: 5px solid black; 
+			width: 200px; 
+			text-align: center; 
+		} 
+	</style> 
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+<div id="gfg">GeeksforGeeks</div> 
+
+	<button>Click to hide() and show() the above div</button> 
